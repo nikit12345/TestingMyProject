@@ -10,6 +10,6 @@ public class TestController {
 
 	@GetMapping("/get")
 	public String get() {
-		return "WELCOME TO AZURE";
+		return "WELCOME TO AZURE TUTORIAL";
 	}
 }
