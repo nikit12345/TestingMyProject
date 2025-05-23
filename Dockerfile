@@ -1,4 +1,3 @@
-FROM openjdk:17-jdk-slim
-EXPOSE 7575
-ADD target/*jar testing.jar
-ENTRYPOINT ["java", "-jar", "/testing.jar"]
+FROM lolhens/baseimage-openjre
+ADD target/testing.jar testing.jar
+ENTRYPOINT ["java", "-jar", "testing.jar"]
