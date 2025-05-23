@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: testing
+  labels:
+    app: testing
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: testing
+  template:
+    metadata:
+      labels:
+        app: testing
+    spec:
+      imagePullSecrets:
+        - name: acr-secret
+      containers:
+        - name: testing-container
+          image: myacrrepo1234.azurecr.io/nikit12345/testing:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 7575
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: testing
+  labels:
+    app: testing
+spec:
+  selector:
+    app: testing
+  ports:
+    - name: http
+      protocol: TCP
+      port: 7575
+      targetPort: 7575
+  type: LoadBalancer
