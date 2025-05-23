@@ -18,7 +18,7 @@ spec:
         - name: acr-secret
       containers:
         - name: testing-container
-          image: myacrrepo1234.azurecr.io/nikit12345/testing:latest
+          image: myacrrepo1234.azurecr.io/nikit12345/testingmyproject:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 7575
