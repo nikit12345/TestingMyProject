@@ -32,6 +32,16 @@ stages:
       vmImage: $(vmImageName)
     steps:
     - checkout: self
+
+    - task: Maven@3
+      displayName: 'Maven Package'
+      inputs:
+            mavenPomFile: 'pom.xml'
+            goals: 'clean package'
+            javaHomeOption: 'JDKVersion'
+            jdkVersionOption: '1.17'
+            mavenOptions: '-Xmx1024m'
+            publishJUnitResults: false
     
     - task: Maven@3
       displayName: 'Maven Package'
