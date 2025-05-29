@@ -17,3 +17,4 @@ spec:
           image: myacrrepo12345.azurecr.io/testingmyproject
           ports:
           - containerPort: 80
+            targetPort: 7575
