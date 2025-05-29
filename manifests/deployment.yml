@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: testingmyproject 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: testingmyproject
+  template:
+    metadata:
+      labels:
+        app: testingmyproject 
+    spec:
+      containers:
+        - name: testingmyproject 
+          image: myacrrepo12345.azurecr.io/testingmyproject
+          ports:
+          - containerPort: 80
