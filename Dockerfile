@@ -1,3 +1,3 @@
 FROM openjdk:17-jdk-slim
-ADD target/*.jar testing.jar
+ADD target/testing.jar testing.jar
 ENTRYPOINT ["java", "-jar", "testing.jar"]
