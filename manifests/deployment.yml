@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: testingmyproject 
-          image: myacrrepo12345.azurecr.io/demo-project
+          image: myacrrepo12345.azurecr.io/testingmyproject
           ports:
           - containerPort: 80
