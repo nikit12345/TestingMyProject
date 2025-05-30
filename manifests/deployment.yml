@@ -1,7 +1,7 @@
-apiVersion : apps/v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: testingmyproject 
+  name: testingmyproject
 spec:
   replicas: 1
   selector:
@@ -10,11 +10,10 @@ spec:
   template:
     metadata:
       labels:
-        app: testingmyproject 
+        app: testingmyproject
     spec:
       containers:
-        - name: testingmyproject 
+        - name: testingmyproject
           image: myacrrepo12345.azurecr.io/testingmyproject
           ports:
-          - containerPort: 80
-            targetPort: 7575
+            - containerPort: 7575
