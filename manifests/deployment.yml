@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: nikittestingmyproject 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nikittestingmyproject
+  template:
+    metadata:
+      labels:
+        app: nikittestingmyproject 
+    spec:
+      containers:
+        - name: nikittestingmyproject 
+          image: myacrddemo.azurecr.io/nikittestingmyproject
+          ports:
+          - containerPort: 7575
