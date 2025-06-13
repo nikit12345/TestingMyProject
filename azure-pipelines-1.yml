@@ -63,7 +63,7 @@ stages:
         # Task-3 publish build artifacts (publish build to azre pipeline)
     - task: PublishBuildArtifacts@1
       inputs:
-       PathtoPublish: '$$(Build.ArtifactStagingDirectory)'
+       PathtoPublish: '$(Build.ArtifactStagingDirectory)'
        ArtifactName: 'kube-manifests'
        publishLocation: 'Container'
         
