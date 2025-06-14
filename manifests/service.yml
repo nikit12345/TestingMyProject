@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-    name: nikittestingmyproject
+    name: testing-project
 spec:
     type: LoadBalancer
     ports:
     - port: 7575 
     selector:
-        app: nikittestingmyproject
+        app: testing-project
